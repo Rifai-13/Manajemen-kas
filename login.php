@@ -2,6 +2,9 @@
 require 'db.php';
 session_start();
 
+$username_error = "";
+$password_error = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -15,7 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: dashboard.php");
         exit;
     } else {
-        echo "Invalid username or password.";
+        $username_error = "Invalid username";
+        $password_error = "Invalid password";
     }
 }
 ?>
@@ -32,12 +36,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="post" action="login.php">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username"><br>
+            <div class="error-message"><?php echo $username_error; ?></div> <!-- Menampilkan pesan kesalahan -->
             <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br><br>
+            <input type="password" id="password" name="password"><br>
+            <div class="error-message"><?php echo $password_error; ?></div> <!-- Menampilkan pesan kesalahan -->
+            <br>
             <input type="submit" value="Login">
         </form>
         <a href="index.php">Kembali</a>
     </div>
 </body>
 </html>
-

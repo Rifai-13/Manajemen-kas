@@ -87,3 +87,33 @@ const monthlyIncomeChart = new Chart(monthlyIncomeChartCtx, {
         }
     }
 });
+
+// Ambil elemen total pendapatan
+const totalIncomeElement = document.getElementById('totalIncome');
+
+// Fungsi untuk mengupdate total pendapatan pada bulan yang dipilih
+function updateTotalIncome(month) {
+    // Kirim permintaan AJAX ke server untuk mendapatkan total pendapatan pada bulan yang dipilih
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                const totalIncome = xhr.responseText;
+                totalIncomeElement.textContent = totalIncome;
+            } else {
+                console.error('Failed to fetch total income.');
+            }
+        }
+    };
+    xhr.open('GET', 'get_total_income.php?month=' + month);
+    xhr.send();
+}
+
+// Event listener untuk perubahan bulan
+monthSelector.addEventListener('change', function() {
+    const selectedMonth = this.value;
+    updateTotalIncome(selectedMonth);
+});
+
+// Panggil fungsi untuk menginisialisasi total pendapatan pada bulan ini
+updateTotalIncome(currentMonth);

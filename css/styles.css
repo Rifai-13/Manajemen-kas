@@ -1,0 +1,303 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f7f7f7;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+    color: #333;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+/* Link Styles */
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Memberi jarak antar tombol */
+}
+
+.button:last-child {
+    margin-right: 0; /* Menghapus margin kanan pada tombol terakhir */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Form Styles */
+form {
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Menengahkan item di navbar */
+    background-color: #333;
+    padding: 4px 10px;
+    color: white;
+    border-radius: 5px; 
+    /* border: 1px solid #666;  */
+}
+
+.navbar-left h2 {
+    margin: 0;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a {
+    margin-left: 10px; /* Memberi jarak antara setiap link */
+    color: #fff; /* Warna teks link */
+    text-decoration: none;
+    padding: 8px 12px; /* Mengurangi ukuran padding pada link */
+    border-radius: 4px; /* Membuat sudut link membulat */
+    background-color: #4CAF50; /* Warna latar belakang link */
+}
+
+.navbar-right a:hover {
+    background-color: #45a049; /* Warna latar belakang saat hover */
+}
+
+.profile-pic {
+    width: 30px; /* Mengurangi ukuran foto profil */
+    height: 30px; /* Mengurangi ukuran foto profil */
+    border-radius: 50%;
+    margin-left: 15px; /* Memberi jarak antara foto profil dan link */
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9; /* Warna latar belakang dropdown */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px; /* Membuat sudut dropdown membulat */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Warna latar belakang saat hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    margin: 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu a {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    border-radius: 3px; /* Mengurangi sudut pada menu */
+    border: 1px solid #45a049; /* Mengurangi ukuran border */
+}
+
+.menu a:hover {
+    background-color: #45a049;
+}
+
+.main-content {
+    padding: 20px;
+    display: block;
+}
+
+/* Container untuk chart */
+.chart-container {
+    flex: 1; /* Menyesuaikan ukuran container secara fleksibel */
+    margin-right: 20px; /* Memberi jarak antar chart */
+}
+
+/* Untuk menyusun chart secara horizontal */
+.charts {
+    display: flex;
+    flex-wrap: wrap; /* Mengatur agar container bisa pindah baris jika tidak cukup lebar */
+    margin-bottom: 20px; /* Memberi jarak di bawah chart */
+}
+
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    /* padding: 14px 20px; */
+    text-decoration: none;
+    /* font-size: 17px; */
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+}
+
+.logout {
+    float: right;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Canvas Styles */
+canvas {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Links Styles */
+.links a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.links a:hover {
+    background-color: #45a049;
+}
